@@ -640,7 +640,7 @@ opacity: 1;
   pointer-events: auto;
 }
 
-.modal-form{
+.modal-windows{
   position: absolute;
   top:50%;
   left:50%;
@@ -708,7 +708,7 @@ opacity: 1;
   letter-spacing: 0.02em;
   text-align: center;
   margin-bottom: 16px;
-  margin-top: 24px;
+  
 }
 
 

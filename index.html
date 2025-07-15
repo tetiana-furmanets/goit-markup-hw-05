@@ -507,7 +507,8 @@
     </footer>
 
     <div class="backdrop is-open" data-modal>
-      <form class="modal-form">
+      <div class="modal-windows">
+     
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
@@ -515,6 +516,7 @@
         </button>
         <p class="modal-title">Leave your contacts and we will call you back</p>
 
+       <form class="modal-form">
         <div class="box-label-modal">
           <label class="label-modal" for="user-name">Name</label>
           <div class="box-input-modal">
@@ -602,6 +604,7 @@
         </div>
         <button class="send-button" type="submit">Send</button>
       </form>
+    </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>
