@@ -549,8 +549,7 @@ opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
-  margin-left: auto; /* Тисне вправо */
+  margin-left: auto;
   max-width: 453px;
 }
 
@@ -560,7 +559,7 @@ opacity: 1;
   color: #ffffff;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin: 0;
+  margin-bottom: 16px; 
 }
 
 .subscribe-form {
@@ -572,12 +571,15 @@ opacity: 1;
   width: 264px;
   height: 40px;
   padding-left: 16px;
-  font-size: 14px;
+  font-size: 12px;
   color: #ffffff;
   background-color: transparent;
   border: 1px solid #ffffff;
   border-radius: 4px;
   transition: border-color 250ms ease;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .subscribe-input::placeholder {
@@ -599,6 +601,8 @@ opacity: 1;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 250ms ease;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 
 .subscribe-button:hover,
@@ -608,6 +612,7 @@ opacity: 1;
 
 .subscribe-icon {
   fill: #ffffff;
+  margin-left: 16px;
 }
 
 
@@ -636,7 +641,7 @@ opacity: 1;
 }
 
 .modal{
-  position: relative;
+  position: absolute;
   top:50%;
   left:50%;
   width: 408px;
@@ -648,7 +653,7 @@ opacity: 1;
   border-radius: 4px;
   transform: translate(-50%,-50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 40px 24px 24px 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop:not(.is-open) .modal{
@@ -667,16 +672,13 @@ opacity: 1;
   justify-content: center;
 
   padding: 0;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
   background-color: #E7E9FC; 
   cursor: pointer;
 
-  transition:
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-close-icon {
@@ -743,7 +745,8 @@ opacity: 1;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  
+  display: block;
+  margin-bottom: 4px;
 }
 .box-input-modal {
   position: relative;
@@ -751,16 +754,31 @@ opacity: 1;
 }
 .input-modal {
   width: 100%;
-  padding: 11px 16px 11px 38px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  background-color: transparent;
-  font-size: 14px;
+  background-color: transparent; 
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #2e2f42;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.input-modal[type="text"],
+.input-modal[type="tel"],
+.input-modal[type="email"] {
+  height: 40px;
+  padding: 11px 16px 11px 38px;
+  font-size: 14px;
+}
+
+.textarea-modal {
+  height: 120px;
+  padding: 8px 16px;
+  resize: none;
+  font-size: 12px; 
+  outline: transparent;
+} 
+
 .icon-modal {
   position: absolute;
   left: 16px;
@@ -782,10 +800,11 @@ opacity: 1;
 
 
 .label{
-font: 400 12px / 1.17 "Roboto", sans-serif;
-letter-spacing: 0.04em;
-color: #8e8f99;
-display: inline-flex;          
+  font-size: 12px; 
+  line-height: 1.17; 
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: inline-flex;          
   align-items: center;
   gap: 8px;                    
   padding: 4px 8px;             
@@ -793,14 +812,12 @@ display: inline-flex;
   border-radius: 4px;
   transition: border-color 250ms ease;
   cursor: pointer; 
-  white-space: nowrap;             
+  white-space: nowrap; 
+  margin-bottom: 24px;             
 }
-.privacy-link{
-font: 400 12px / 1.33333 "Roboto", sans-serif;
-text-decoration: underline;
-text-decoration-skip-ink: none;
-color: #4d5ae5;
-}
+
+
+
 .custom-checkbox{
   display: inline-flex;
   align-items: center;
@@ -810,8 +827,7 @@ color: #4d5ae5;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   fill: transparent;
-  
-transition: border-color 250ms ease, background-color 250ms ease;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked+ .label > .custom-checkbox{
@@ -833,7 +849,9 @@ transition: border-color 250ms ease, background-color 250ms ease;
   border: none;
 }
 
-
+.privacy-link{
+color: #4d5ae5;
+}
 
 .send-button {
   display: block;
@@ -842,20 +860,22 @@ transition: border-color 250ms ease, background-color 250ms ease;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   color: #ffffff;
   background-color: #4d5ae5;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 250ms ease, transform 250ms ease;
-  width: 169px;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  min-width: 169px;
   height: 56px;
 }
 
 .send-button:hover,
 .send-button:focus {
-  background-color: #404bbf; /* темніший синій */
-  transform: scale(1.05); /* збільшення на 5% */
+  background-color: #404bbf; 
+  transform: scale(1.05); 
   outline: none;
 }
 
