@@ -506,8 +506,8 @@
       </div>
     </footer>
 
-    <div class="backdrop" data-modal>
-      <div class="modal">
+    <div class="backdrop is-open" data-modal>
+      <form class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
@@ -523,7 +523,6 @@
               type="text"
               id="user-name"
               name="user-name"
-              placeholder="Your name"
               required
             />
             <svg class="icon-modal" width="18" height="24">
@@ -540,7 +539,6 @@
               type="tel"
               id="user-phone"
               name="user-phone"
-              placeholder=""
               required
             />
             <svg class="icon-modal" width="18" height="24">
@@ -554,10 +552,9 @@
           <div class="box-input-modal">
             <input
               class="input-modal"
-              type="Email"
+              type="email"
               id="user-email"
               name="user-email"
-              placeholder=""
               required
             />
             <svg class="icon-modal" width="18" height="24">
@@ -588,18 +585,23 @@
             id="user-privacy"
             value="true"
           />
-          <label class="label" for="user-privacy">
+          <label class="label" 
+             for="user-privacy">
             <span class="custom-checkbox">
-              <svg class="custom-checkbox-icon" width="10" height="8">
+              <svg class="custom-checkbox-icon" 
+                 width="10" height="8">
                 <use href="./images/icons.svg#icon-check"></use>
               </svg>
             </span>
             I accept the terms and conditions of the
-            <a class="privacy-link">Privacy Policy</a>
+            <a class="privacy-link"
+                href="#">
+                Privacy Policy
+            </a>
           </label>
         </div>
         <button class="send-button" type="submit">Send</button>
-      </div>
+      </form>
     </div>
     <script src="./js/modal.js"></script>
   </body>
