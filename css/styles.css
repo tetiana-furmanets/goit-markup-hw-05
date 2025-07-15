@@ -836,7 +836,7 @@ opacity: 1;
 
 
 
-.checkbox:checked + .label > .custom-checkbox {
+.checkbox:checked ~ .privacy-label > .custom-checkbox {
   background-color: #404bbf;
   fill: #f4f4fd;
   border: none;
