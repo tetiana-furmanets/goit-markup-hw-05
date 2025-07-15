@@ -656,7 +656,7 @@ opacity: 1;
   padding: 72px 24px 24px 24px;
 }
 
-.backdrop:not(.is-open) .modal{
+.backdrop:not(.is-open) .modal-form{
    transform: translate(-50%,-100%);
 }
 .modal-close-btn {
@@ -794,7 +794,7 @@ opacity: 1;
   border-color: #4d5ae5;
   outline: none;
 }
-.input-modal:focus + .icon-modal {
+.input-modal:focus ~ .icon-modal {
   fill: #4d5ae5;
 }
 
@@ -836,7 +836,7 @@ opacity: 1;
 
 
 
-.checkbox:checked ~ .privacy-label > .custom-checkbox {
+.checkbox-input:checked ~ .privacy-label > .custom-checkbox {
   background-color: #404bbf;
   fill: #f4f4fd;
   border: none;
