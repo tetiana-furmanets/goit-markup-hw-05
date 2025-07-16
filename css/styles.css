@@ -737,9 +737,14 @@ opacity: 1;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   
 }
+
+.box-label-modal .comment{
+  margin-bottom: 16px;
+}
+
 .label-modal {
   font-size: 12px;
   line-height: 1.17;
@@ -748,10 +753,7 @@ opacity: 1;
   display: block;
   margin-bottom: 4px;
 }
-.box-input-modal {
-  position: relative;
- 
-}
+
 .input-modal {
   width: 100%;
   border: 1px solid rgba(46, 47, 66, 0.4);
