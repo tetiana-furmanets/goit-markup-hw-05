@@ -823,13 +823,13 @@ opacity: 1;
   border-radius: 4px;
   transition: border-color 250ms ease;
   cursor: pointer; 
-  white-space: nowrap;             
+  white-space: nowrap;  
+  display: inline-flex;           
 }
 
 
 
 .custom-checkbox{
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 16px;
