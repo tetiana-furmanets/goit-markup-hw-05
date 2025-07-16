@@ -826,7 +826,7 @@ opacity: 1;
   white-space: nowrap;             
 }
 
-span.custom-checkbox{
+.custom-checkbox{
   display: inline-flex; 
   align-items: center;
   justify-content: center;
