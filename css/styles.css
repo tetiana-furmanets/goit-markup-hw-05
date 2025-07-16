@@ -741,7 +741,7 @@ opacity: 1;
   
 }
 
-.box-label-modal .comment{
+.box-label-modal comment{
   margin-bottom: 16px;
 }
 
@@ -752,6 +752,10 @@ opacity: 1;
   color: #8e8f99;
   display: block;
   margin-bottom: 4px;
+}
+
+.box-input-modal {
+  position: relative;
 }
 
 .input-modal {
@@ -786,7 +790,7 @@ opacity: 1;
 .icon-modal {
   position: absolute;
   left: 16px;
-  top: 50%;
+   top: 50%; 
   transform: translateY(-50%);
   fill: #2e2f42;
   pointer-events: none;
@@ -802,6 +806,9 @@ opacity: 1;
   fill: #4d5ae5;
 }
 
+.checkbox-wrapper{
+ margin-bottom: 24px;  
+}
 
 .privacy-label{
   font-size: 12px; 
@@ -816,8 +823,7 @@ opacity: 1;
   border-radius: 4px;
   transition: border-color 250ms ease;
   cursor: pointer; 
-  white-space: nowrap; 
-  margin-bottom: 24px;             
+  white-space: nowrap;             
 }
 
 
@@ -864,7 +870,7 @@ color: #4d5ae5;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
   min-width: 169px;
   height: 56px;
 }
